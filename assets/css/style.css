@@ -37,9 +37,11 @@ img {
   padding: 10px 15px;
   font-size: 0.9rem;
   color: var(--active-color);
-  background: transparent;
+  background: #fff;
   margin: 10px 0 0;
   display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
 }
 .btn-custom:hover {
   text-decoration: none;
@@ -698,10 +700,35 @@ footer .list-inline-item a {
 .banner-contact {
   /* background: #cab785; */
 }
+.img-contact {
+  max-height: 600px;
+}
 /* /contact us */
 /* our charity */
-.banner-charity {
+/* .banner-charity {
   background: url(../img/ocean-2.jpg) left center/ cover no-repeat;
+} */
+.ocean-conservation-content h4 {
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.ocean-conservation-content {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.img-bottle {
+  height: 100px;
+}
+.animation-dolphin {
+  background: url(../img/ocean-conservation.gif) left bottom/ 100% no-repeat;
+  display: inline-block;
+  padding: 30px 0 0;
+}
+.icon-charity {
+  max-height: 80px;
 }
 /* /our-charity*/
 /* purchase */
@@ -725,11 +752,7 @@ footer .list-inline-item a {
   display: block;
   border-bottom: 1px solid #eee;
 }
-.animation-dolphin {
-  background: url(../img/ocean-conservation.gif) left bottom/ 100% no-repeat;
-  display: inline-block;
-  padding: 30px 0 0;
-}
+
 /* /purchase */
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -824,6 +847,12 @@ footer .list-inline-item a {
   }
   .banner-purchase {
     height: auto;
+  }
+  .elsativo-recipe {
+    height: auto;
+  }
+  .btn-custom {
+    width: 100%;
   }
 }
 
