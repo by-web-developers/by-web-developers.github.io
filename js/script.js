@@ -35,4 +35,10 @@ function checkAge() {
   }, 2000);
 }
 
-function scrollDown() {}
+function scrollDown() {
+  let aboutSection = document.getElementById("ourStory");
+}
+
+function sendMessage(e) {
+  e.preventDefault();
+}

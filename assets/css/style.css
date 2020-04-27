@@ -51,6 +51,7 @@ img {
 .custom-heading {
   font-family: "Neutra Text";
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .dropdown-toggle::after {
   vertical-align: middle;
@@ -111,7 +112,7 @@ textarea {
 /* main body */
 /* cocktails */
 .elsativo-recipe {
-  height: 500px;
+  max-height: 500px;
 }
 .recipe-content {
   background: rgba(41, 126, 193, 0.25);
@@ -228,19 +229,55 @@ textarea {
     transform: translatey(0px);
   }
 }
+.crt-widget.crt-widget-branded .crt-logo {
+  display: none !important;
+}
+.crt-widget-grid .crt-grid-post {
+  border: 5px solid #fff !important;
+}
+.crt-no-touch .crt-grid-post .crt-post-c {
+  border: 1px solid #eee;
+}
 /* /main body */
 /* footer */
 footer {
-  background: #fafafa;
+  background: #d5d2cd;
   color: var(--accent-color);
 }
 footer a,
 footer .list-inline-item a {
   color: var(--accent-color);
+  text-transform: uppercase;
+  font-size: 0.7rem;
 }
 .copyright {
-  border-color: #eee !important;
-  color: var(--accent-color) !important;
+  border-top: 1px solid #afafaf;
+  color: #807e7e;
+}
+.nav-item-footer {
+  list-style-type: none;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+}
+.nav-item-footer:after {
+  content: "|";
+  position: absolute;
+  right: 0;
+}
+.nav-item-footer:last-child:after {
+  content: "";
+}
+footer .list-group-horizontal {
+  flex-flow: wrap;
+}
+footer .list-inline-item:not(:last-child) {
+  margin-right: 0;
+}
+.list-top a {
+  letter-spacing: 1px;
+}
+.logo-footer {
+  height: 60px;
 }
 /* /footer */
 /* age modal window */
@@ -669,6 +706,8 @@ footer .list-inline-item a {
 }
 .container-recipe {
   position: relative;
+  max-height: 520px;
+  overflow: hidden;
 }
 .container-recipe:hover .drink-recipe {
   opacity: 1;
@@ -849,10 +888,19 @@ footer .list-inline-item a {
     height: auto;
   }
   .elsativo-recipe {
-    height: auto;
+    max-height: none;
   }
   .btn-custom {
     width: 100%;
+  }
+  .nav-item-footer {
+    padding: 0.75rem;
+  }
+  .crt-widget-grid .crt-load-more-container {
+    display: block !important;
+  }
+  .btn-recipe {
+    width: auto;
   }
 }
 
