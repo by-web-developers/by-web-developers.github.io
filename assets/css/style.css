@@ -36,12 +36,13 @@ img {
   border: 1px solid var(--active-color);
   padding: 10px 15px;
   font-size: 0.9rem;
-  color: var(--active-color);
-  background: #fff;
+  color: #fff;
+  background: var(--active-color);
   margin: 10px 0 0;
   display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
 }
 .btn-custom:hover {
   text-decoration: none;
@@ -195,6 +196,9 @@ textarea {
 .parallax-img {
   background-size: 100%;
   background-repeat: no-repeat;
+}
+#parallax3 .parallax-img {
+  background-position: center bottom;
 }
 .box1 {
   background: #fff;
@@ -377,7 +381,7 @@ footer .list-inline-item:not(:last-child) {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #242f3f;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -697,17 +701,15 @@ footer .list-inline-item:not(:last-child) {
   bottom: 10px;
   right: 0;
   margin: 0 auto;
-  background: #fff;
-  text-transform: capitalize;
+  /* background: #fff; */
+  /* text-transform: capitalize; */
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
-.btn-recipe:hover {
-  color: #fff;
-}
+
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 50%;
@@ -730,6 +732,12 @@ footer .list-inline-item:not(:last-child) {
   position: relative;
   max-height: 520px;
   overflow: hidden;
+}
+.container-recipe img {
+  transition: all 1s ease-in-out;
+}
+.container-recipe:hover img {
+  transform: scale(1.03);
 }
 .container-recipe:hover .drink-recipe {
   opacity: 1;
