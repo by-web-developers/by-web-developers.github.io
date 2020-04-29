@@ -17,6 +17,7 @@ function fadeOutEffect(target) {
       fadeTarget.style.opacity -= 0.1;
     } else {
       clearInterval(fadeEffect);
+      $(".loader-wrapper").addClass("d-none");
     }
   }, 50);
 }
@@ -37,8 +38,34 @@ function checkAge() {
 
 function scrollDown() {
   let aboutSection = document.getElementById("ourStory");
+  aboutSection.scrollIntoView();
+}
+
+let navLinkArr = document.getElementsByClassName("nav-item");
+for (let i = 0; i < navLinkArr.length; i++) {
+  navLinkArr[i].addEventListener("click", addClassActive);
+}
+
+function addClassActive(e) {
+  [].forEach.call(navLinkArr, function (el) {
+    el.classList.remove("active");
+  });
+  e.target.parentNode.classList.add("active");
 }
 
 function sendMessage(e) {
   e.preventDefault();
+}
+
+window.addEventListener("scroll", sectionScroll);
+function sectionScroll() {
+  let windowScroll = window.pageYOffset;
+  let sectionArray = document.getElementsByClassName("page-section");
+
+  [...sectionArray].forEach(function (currentValue, index) {
+    if (currentValue.offsetTop <= windowScroll) {
+      $(".nav-item.active").removeClass("active");
+      $(".nav-item").eq(index).addClass("active");
+    }
+  });
 }
