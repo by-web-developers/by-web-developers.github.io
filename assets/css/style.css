@@ -234,7 +234,7 @@ textarea {
   display: none !important;
 }
 .crt-widget-grid .crt-grid-post {
-  border: 10px solid #fff !important;
+  /* border: 10px solid #fff !important; */
 }
 .crt-no-touch .crt-grid-post .crt-post-c {
   border: 1px solid #eee;

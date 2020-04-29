@@ -55,6 +55,15 @@ function addClassActive(e) {
 
 function sendMessage(e) {
   e.preventDefault();
+  Email.send({
+    Host: "smtp.mailtrap.io",
+    Username: "<>",
+    Password: "<>",
+    To: "bywebdevelopers@gmail.com",
+    From: document.getElementById("exampleFormControlInput2").value,
+    Subject: "Inquiry from the Elsativo Website",
+    Body: document.getElementById("exampleFormControlTextarea5").value,
+  }).then((message) => alert(message));
 }
 
 window.addEventListener("scroll", sectionScroll);
