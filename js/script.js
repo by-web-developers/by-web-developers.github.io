@@ -22,7 +22,7 @@ function fadeOutEffect(target) {
       clearInterval(fadeEffect);
       $(".loader-wrapper").addClass("d-none");
     }
-  }, 50);
+  }, 25);
 }
 
 $(window).on("load", function () {
@@ -59,9 +59,11 @@ function addClassActive(e) {
 function sendMessage(e) {
   e.preventDefault();
   Email.send({
-    Host: "smtp.mailtrap.io",
-    Username: "<>",
-    Password: "<>",
+    Host: "smtp.sendgrid.net",
+    Username: "elsativo",
+    port: 465,
+    Password:
+      "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",
     To: "bywebdevelopers@gmail.com",
     From: document.getElementById("exampleFormControlInput2").value,
     Subject: "Inquiry from the Elsativo Website",

@@ -261,7 +261,7 @@ ul.social-icons {
   right: 0;
   z-index: 1;
   background: transparent;
-  top: 200px;
+  top: 100px;
 }
 .social-icons .list-group-item {
   background: transparent;
@@ -271,7 +271,7 @@ ul.social-icons {
   padding: 5px 10px;
 }
 .social-icons .list-group-item a {
-  /* color: #fff; */
+  color: #fff;
 }
 /* /main body */
 /* footer */
@@ -896,9 +896,6 @@ footer .list-inline-item:not(:last-child) {
 @media (max-width: 767px) {
   .section-snippet {
     text-align: center;
-  }
-  ul.social-icons {
-    top: 100px;
   }
   .parallax-img {
     background-size: 100%;
