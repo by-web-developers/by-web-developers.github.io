@@ -1,12 +1,15 @@
 //to show a modal window
+let navbarLogo = document.getElementsByClassName("navbar-brand")[0];
 let isValidAge = JSON.parse(localStorage.getItem("isValidAge"));
 if (!isValidAge) {
   $("#myModal").modal({
     show: true,
     backdrop: "static",
   });
+  navbarLogo.classList = "navbar-brand d-none";
 }
 
+/** js for loader */
 function fadeOutEffect(target) {
   var fadeTarget = document.getElementById(target);
   var fadeEffect = setInterval(function () {
@@ -33,6 +36,7 @@ function checkAge() {
   $(".img-medal").addClass("spin");
   setTimeout(() => {
     $("#myModal").modal("hide");
+    navbarLogo.classList = "navbar-brand";
   }, 2000);
 }
 
@@ -47,10 +51,9 @@ for (let i = 0; i < navLinkArr.length; i++) {
 }
 
 function addClassActive(e) {
-  [].forEach.call(navLinkArr, function (el) {
-    el.classList.remove("active");
-  });
+  $(".nav-item.active").removeClass("active");
   e.target.parentNode.classList.add("active");
+  $(".navbar-collapse").removeClass("show");
 }
 
 function sendMessage(e) {
@@ -66,15 +69,15 @@ function sendMessage(e) {
   }).then((message) => alert(message));
 }
 
-window.addEventListener("scroll", sectionScroll);
-function sectionScroll() {
-  let windowScroll = window.pageYOffset;
-  let sectionArray = document.getElementsByClassName("page-section");
+// window.addEventListener("scroll", sectionScroll);
+// function sectionScroll() {
+//   let windowScroll = window.pageYOffset;
+//   let sectionArray = document.getElementsByClassName("page-section");
 
-  [...sectionArray].forEach(function (currentValue, index) {
-    if (currentValue.offsetTop <= windowScroll) {
-      $(".nav-item.active").removeClass("active");
-      $(".nav-item").eq(index).addClass("active");
-    }
-  });
-}
+//   [...sectionArray].forEach(function (currentValue, index) {
+//     if (currentValue.offsetTop <= windowScroll) {
+//       $(".nav-item.active").removeClass("active");
+//       $(".nav-item").eq(index).addClass("active");
+//     }
+//   });
+// }

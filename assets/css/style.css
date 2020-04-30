@@ -20,6 +20,19 @@ h6 {
   color: var(--accent-color);
   font-weight: bold;
   letter-spacing: 2px;
+  position: relative;
+}
+h2 {
+  display: inline-block;
+}
+h2:after {
+  content: " ";
+  height: 6px;
+  width: 100%;
+  background: rgba(41, 126, 193, 0.5);
+  position: absolute;
+  bottom: 15px;
+  left: 0;
 }
 a {
   color: var(--active-color);
@@ -210,14 +223,14 @@ textarea {
   top: 35%;
   text-align: center;
 } */
-.img-our-story {
+/* .img-our-story {
   height: 350px;
 }
 .sect-one {
   top: 300px;
   left: 0;
   right: 0;
-}
+} */
 .bottle {
   height: 500px;
   transform: translatey(0px);
@@ -254,11 +267,11 @@ ul.social-icons {
   background: transparent;
   border: none;
   display: inline-block;
-  color: #fff;
+  /* color: #fff; */
   padding: 5px 10px;
 }
 .social-icons .list-group-item a {
-  color: #fff;
+  /* color: #fff; */
 }
 /* /main body */
 /* footer */
@@ -303,7 +316,7 @@ footer .list-inline-item:not(:last-child) {
   letter-spacing: 1px;
 }
 .logo-footer {
-  height: 60px;
+  width: 250px;
 }
 /* /footer */
 /* age modal window */
@@ -343,6 +356,10 @@ footer .list-inline-item:not(:last-child) {
 }
 .modal-body .cont-medal img {
   height: 200px;
+}
+.modal-body .cont-medal img:hover {
+  cursor: url("../img/age-verification.png"), auto !important;
+  cursor: pointer;
 }
 .age-validation {
   transition: all 0.3s ease-in-out;
@@ -853,72 +870,52 @@ footer .list-inline-item:not(:last-child) {
     position: absolute;
   }
 }
+@media only screen and (max-width: 1024px) {
+  h2 {
+    letter-spacing: 0;
+  }
+  .nav-item {
+    padding: 0 10px;
+  }
+  .parallaxParent > * {
+    top: -76%;
+  }
+  #parallax3 .parallax-img {
+    background-position: center top;
+  }
+  .btn-custom {
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+  .custom-heading {
+    letter-spacing: 0px;
+    text-transform: capitalize;
+  }
+}
 
 @media (max-width: 767px) {
-  body {
-    font-size: 1rem;
+  .section-snippet {
+    text-align: center;
   }
-  /* .section-snippet {
-    position: static;
-  } */
-  .sect-one {
-    padding-top: 150px;
+  ul.social-icons {
+    top: 100px;
   }
   .parallax-img {
     background-size: 100%;
     background-position: center center;
   }
   .parallaxParent {
-    height: 400px;
+    height: 350px;
   }
   .parallaxParent > * {
     height: 100%;
-    top: -45%;
+    top: -38%;
   }
   .scroll-down {
     top: 82%;
   }
   .nav-item {
     padding: 0;
-  }
-  ul.timeline:before {
-    left: 30px;
-  }
-
-  ul.timeline > li > .timeline-panel {
-    width: calc(100% - 90px);
-    width: -moz-calc(100% - 90px);
-    width: -webkit-calc(100% - 90px);
-  }
-
-  ul.timeline > li > .timeline-badge {
-    left: 15px;
-    margin-left: 0;
-    top: 16px;
-  }
-
-  ul.timeline > li > .timeline-panel {
-    float: right;
-  }
-
-  ul.timeline > li > .timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto;
-  }
-
-  ul.timeline > li > .timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto;
-  }
-  .banner-spotlight {
-    height: 600px;
-  }
-  .banner-purchase {
-    height: auto;
   }
   .elsativo-recipe {
     max-height: none;
@@ -934,6 +931,9 @@ footer .list-inline-item:not(:last-child) {
   }
   .btn-recipe {
     width: auto;
+  }
+  .banner-contact .col-md-6 {
+    text-align: center;
   }
 }
 
