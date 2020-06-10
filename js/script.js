@@ -33,7 +33,7 @@ $(window).on("load", function () {
 
 function checkAge() {
   localStorage.setItem("isValidAge", true);
-  $(".img-medal").addClass("spin");
+  // $(".img-medal").addClass("spin");
   setTimeout(() => {
     $("#myModal").modal("hide");
     navbarLogo.classList = "navbar-brand";
@@ -55,31 +55,3 @@ function addClassActive(e) {
   e.target.parentNode.classList.add("active");
   $(".navbar-collapse").removeClass("show");
 }
-
-function sendMessage(e) {
-  e.preventDefault();
-  Email.send({
-    Host: "smtp.sendgrid.net",
-    Username: "elsativo",
-    port: 465,
-    Password:
-      "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",
-    To: "bywebdevelopers@gmail.com",
-    From: document.getElementById("exampleFormControlInput2").value,
-    Subject: "Inquiry from the Elsativo Website",
-    Body: document.getElementById("exampleFormControlTextarea5").value,
-  }).then((message) => alert(message));
-}
-
-// window.addEventListener("scroll", sectionScroll);
-// function sectionScroll() {
-//   let windowScroll = window.pageYOffset;
-//   let sectionArray = document.getElementsByClassName("page-section");
-
-//   [...sectionArray].forEach(function (currentValue, index) {
-//     if (currentValue.offsetTop <= windowScroll) {
-//       $(".nav-item.active").removeClass("active");
-//       $(".nav-item").eq(index).addClass("active");
-//     }
-//   });
-// }
