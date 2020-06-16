@@ -284,7 +284,7 @@ textarea {
   text-align: center;
   padding: 15px;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -781,11 +781,13 @@ footer .list-inline-item:not(:last-child) {
     max-height: none;
   }
   .drink-recipe {
-    position: static;
-    opacity: 1;
+    line-height: 1;
   }
-  .drink-recipe h4 {
-    text-align: center;
+  .drink-recipe h4{
+    margin: 0 !important;
+  }
+  .medals{
+    width: 250px;
   }
 }
 
