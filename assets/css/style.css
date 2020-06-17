@@ -782,9 +782,13 @@ footer .list-inline-item:not(:last-child) {
   }
   .drink-recipe {
     line-height: 1;
+    font-size: .9rem;
   }
   .drink-recipe h4{
     margin: 0 !important;
+  }
+  .drink-recipe ol{
+    padding-left: 15px;
   }
   .medals{
     width: 250px;
